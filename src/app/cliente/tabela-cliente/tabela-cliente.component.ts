@@ -53,7 +53,6 @@ export class TabelaClienteComponent implements OnInit {
       try {
         this.ServicoCliente.delete(cpfCliente).subscribe(
           data => {
-            console.log(data);
           })
       } catch (error) {
         console.log(error);

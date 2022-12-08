@@ -16,13 +16,11 @@ export class CadastroClienteComponent {
   }
 
   buscarPorCpf(cpf: string) {
-    console.log(cpf)
     try {
       this.ServicoCliente.get(cpf)
         .subscribe(
           data => {
             this.cliente = data;
-            console.log(data);
           });
     } catch (error) {
       console.log(error)
@@ -35,7 +33,6 @@ export class CadastroClienteComponent {
         this.ServicoCliente.create(this.cliente).subscribe(
           data => {
             this.cliente = data;
-            console.log(data);
           });
       } else {
         this.ServicoCliente.update(this.cliente.id, this.cliente).subscribe(
