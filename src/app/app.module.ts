@@ -3,16 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
+import { CadastroClienteComponent } from './cliente/cadastro-cliente/cadastro-cliente.component';
+import { TabelaClienteComponent } from './cliente/tabela-cliente/tabela-cliente.component';
+import { HttpClientModule } from "@angular/common/http";
+import { HomeClienteComponent } from './cliente/home-cliente/home-cliente.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroComponent
+    CadastroClienteComponent,
+    TabelaClienteComponent,
+    HomeClienteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

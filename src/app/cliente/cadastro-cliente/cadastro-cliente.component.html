@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title titulo-card">Cadastro Cliente</h5>
+  </div>
+  <form>
+    <div class="card-body p-4">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.nome"
+                   class="form-control" placeholder="Digite o nome do Cliente...">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="cpf">CPF:</label>
+            <input id="cpf" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.cpf"
+                   class="form-control" placeholder="Digite o CPF do Cliente...">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="credito">Credito:</label>
+            <input id="credito" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.credito" type="text"
+                   class="form-control" placeholder="Digite o Valor Crédito do Cliente...">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="debito">Debito:</label>
+            <input id="debito" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.debito" type="text"
+                   class="form-control" placeholder="Digite o Valor Debito do Cliente...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer mt-3 border-1 p-0" style="background-color: aquamarine">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="float-end p-2">
+            <a class="btn btn-primary" (click)="buscarPorCpf(cliente.cpf)">Buscar por CPF</a>
+            <button type="submit" class="btn btn-success" style="margin-left: 10px" (click)="salvarAtualizar()">Cadastrar/Atualizar</button>
+            <a class="btn btn-secondary" style="margin-left: 10px" (click)="limpar()">Limpar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

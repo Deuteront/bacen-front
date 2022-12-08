@@ -1,1 +1,23 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+div {
+  border-color: rgba(0, 0, 0, 0.19) !important;
+}
+.form-group{
+  padding: 5px;
+}
+label {
+  margin-bottom: 5px;
+}
+.card-header {
+  color: white !important;
+  background-color: cadetblue !important;
+  padding: 10px !important;
+  font-size: 25px !important;
+}
+
+.card-footer {
+  background-color: rgba(95, 158, 160, 0.25) !important;
+  --bs-backdrop-opacity: 1;
+
+}
