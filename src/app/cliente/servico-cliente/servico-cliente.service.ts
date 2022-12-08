@@ -4,7 +4,7 @@ import { HttpClient } from "@angular/common/http";
 import { Cliente } from "../cliente";
 
 
-const baseUrl = 'http://localhost:8080/cliente';
+const baseUrl = 'http://localhost:5000/api/clients';
 
 @Injectable({
   providedIn: 'root'
