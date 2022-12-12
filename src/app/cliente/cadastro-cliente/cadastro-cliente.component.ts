@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { ServicoCliente } from "../servico-cliente/servico-cliente.service";
 import { Cliente } from "../cliente";
 import { EventClienteService } from "../servico-cliente/event-cliente.service";
@@ -15,7 +15,7 @@ export class CadastroClienteComponent {
     this.cliente = new Cliente();
   }
 
-  buscarPorCpf(cpf: string) {
+  buscarPorNome(cpf: string) {
     try {
       this.ServicoCliente.get(cpf)
         .subscribe(
@@ -29,17 +29,10 @@ export class CadastroClienteComponent {
 
   salvarAtualizar() {
     try {
-      if (this.cliente.id) {
         this.ServicoCliente.create(this.cliente).subscribe(
           data => {
             this.cliente = data;
           });
-      } else {
-        this.ServicoCliente.update(this.cliente.id, this.cliente).subscribe(
-          data => {
-            this.cliente = data;
-          });
-      }
     } catch (error) {
       console.log(error)
     }

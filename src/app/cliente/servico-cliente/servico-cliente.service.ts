@@ -12,6 +12,7 @@ const baseUrl = 'http://localhost:5000/api/clients';
 export class ServicoCliente {
 
   constructor(private http: HttpClient) {
+    http.head('')
   }
 
   getAll(): Observable<any> {

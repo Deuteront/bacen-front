@@ -14,21 +14,23 @@
       <thead>
       <tr>
         <th scope="col"></th>
-        <th scope="col">Nome</th>
-        <th scope="col">CPF</th>
-        <th scope="col">Credito</th>
-        <th scope="col">Debito</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+        <th scope="col">Initial Balance</th>
+        <th scope="col">Credit Card Limit</th>
       </tr>
       </thead>
       <tbody>
       <tr class=" border border-1" *ngFor="let cliente of clientes; let i = index">
         <td><input id="credito" class="form-check-input" type="checkbox"
-                                                  value="{{ clientesSelecionados[cliente.cpf] }}"
-                                                  (click)="selecionarCliente(cliente.cpf)"></td>
-        <td>{{ cliente.nome }}</td>
-        <td>{{ cliente.cpf }}</td>
-        <td>{{ cliente.credito }}</td>
-        <td>{{ cliente.debito }}</td>
+                                                  value="{{ clientesSelecionados[cliente.Email] }}"
+                                                  (click)="selecionarCliente(cliente.Email)"></td>
+        <td>{{ cliente.Name }}</td>
+        <td>{{ cliente.Email }}</td>
+        <td>{{ cliente.Address }}</td>
+        <td>{{ cliente.Account.initialBalance }}</td>
+        <td>{{ cliente.Account.creditCardLimit }}</td>
       </tr>
       </tbody>
     </table>

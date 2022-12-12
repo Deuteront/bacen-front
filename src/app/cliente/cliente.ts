@@ -1,50 +1,47 @@
+class AccountRequest {
+   initialBalance !: number;
+   password !: string;
+   creditCardLimit !: number;
 
+}
 
 export class Cliente {
-  get id(): string {
-    return this._id;
-  }
-
-  set id(value: string) {
-    this._id = value;
-  }
   constructor() {
   }
 
-  private _id!: string;
-  private _cpf!: string;
-  private _nome!: string;
-  private _credito!: number;
-  private _debito!: number;
-  get debito(): number {
-    return this._debito;
+  private name!: string;
+  private email!: string;
+  private address!: number;
+  private account: AccountRequest = { initialBalance: 0, password: '', creditCardLimit: 0};
+  get Account(): AccountRequest {
+    return this.account;
   }
 
-  set debito(value: number) {
-    this._debito = value;
+  set Account(value: AccountRequest) {
+    this.account = value;
   }
 
-  get credito(): number {
-    return this._credito;
+  get Address(): number {
+    return this.address;
   }
 
-  set credito(value: number) {
-    this._credito = value;
+  set Address(value: number) {
+    this.address = value;
   }
 
-  get cpf(): string {
-    return this._cpf;
+  get Name(): string {
+    return this.name;
   }
 
-  set cpf(value: string) {
-    this._cpf = value;
+  set Name(value: string) {
+    this.name = value;
   }
 
-  get nome(): string {
-    return this._nome;
+  get Email(): string {
+    return this.email;
   }
 
-  set nome(value: string) {
-    this._nome = value;
+  set Email(value: string) {
+    this.email = value;
   }
 }

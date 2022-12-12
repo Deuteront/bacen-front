@@ -8,29 +8,43 @@
         <div class="col-sm-6">
           <div class="form-group">
             <label for="nome">Nome:</label>
-            <input id="nome" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.nome"
+            <input id="nome" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.Name"
                    class="form-control" placeholder="Digite o nome do Cliente...">
           </div>
         </div>
         <div class="col-sm-6">
           <div class="form-group">
-            <label for="cpf">CPF:</label>
-            <input id="cpf" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.cpf"
-                   class="form-control" placeholder="Digite o CPF do Cliente...">
+            <label for="endereco">Endereco:</label>
+            <input id="endereco" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.Address"
+                   class="form-control" placeholder="Digite o Endereço do Cliente...">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.Email"
+                   class="form-control" placeholder="Digite o Email do Cliente...">
           </div>
         </div>
         <div class="col-sm-6">
           <div class="form-group">
             <label for="credito">Credito:</label>
-            <input id="credito" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.credito" type="text"
+            <input id="credito" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.Account.creditCardLimit" type="text"
                    class="form-control" placeholder="Digite o Valor Crédito do Cliente...">
           </div>
         </div>
         <div class="col-sm-6">
           <div class="form-group">
             <label for="debito">Debito:</label>
-            <input id="debito" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.debito" type="text"
+            <input id="debito" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.Account.initialBalance" type="text"
                    class="form-control" placeholder="Digite o Valor Debito do Cliente...">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input id="senha" type="password" [ngModelOptions]="{standalone: true}" [(ngModel)]="cliente.Account.password"
+                   class="form-control" placeholder="Digite a Senha do Cliente...">
           </div>
         </div>
       </div>
@@ -39,7 +53,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="float-end p-2">
-            <a class="btn btn-primary" (click)="buscarPorCpf(cliente.cpf)">Buscar por CPF</a>
+            <a class="btn btn-primary" (click)="buscarPorNome(cliente.Name)">Buscar por Nome</a>
             <button type="submit" class="btn btn-success" style="margin-left: 10px" (click)="salvarAtualizar()">Cadastrar/Atualizar</button>
             <a class="btn btn-secondary" style="margin-left: 10px" (click)="limpar()">Limpar</a>
           </div>
